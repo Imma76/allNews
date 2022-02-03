@@ -1,9 +1,7 @@
-import 'package:all_news/landing.dart';
+import 'package:all_news/ui/views/landing.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'selection.dart';
-import 'responsive.dart';
+import '../widgets/responsive.dart';
 //
 class SelectionPage extends StatelessWidget {
   static const id = 'Selection';

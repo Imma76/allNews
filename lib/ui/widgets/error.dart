@@ -1,5 +1,9 @@
-import 'package:all_news/select_page.dart';
+import 'package:all_news/ui/views/select_page.dart';
 import 'package:flutter/material.dart';
+
+
+
+
 class ErrorPage extends StatelessWidget {
   static const id = 'ErrorPage';
   @override

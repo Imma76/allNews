@@ -1,10 +1,12 @@
-import 'package:all_news/business/business_news_page_list.dart';
-import 'package:all_news/entertaiment/entertainment_news_page_list.dart';
-import 'package:all_news/health/health_news_page_list.dart';
-import 'package:all_news/sports/sports_news_page_list.dart';
-import 'package:all_news/technology/technology_news_page_list.dart';
+import 'package:all_news/ui/views/entertainment_news_page_list.dart';
 import 'package:flutter/material.dart';
-import 'package:all_news/responsive.dart';
+import 'package:all_news/ui/widgets/responsive.dart';
+
+import 'business_news_page_list.dart';
+import 'health_news_page_list.dart';
+import 'sports_news_page_list.dart';
+import 'technology_news_page_list.dart';
+
 
 class HeadlineNewsPageList extends StatefulWidget {
   final countryName;
@@ -31,10 +33,10 @@ class _HeadlineNewsPageListState extends State<HeadlineNewsPageList> {
     final List<Widget> widgetOptions = [
       BusinessNewsPageList(countryName: widget.countryName),
       EntertainmentNewsPageList(countryName: widget.countryName),
-      HealthNewsPageList(countryName: widget.countryName),
-      // ScienceNewsPageList(countryName: widget.countryName),
-      SportsNewsPageList(countryName: widget.countryName),
-      TechNewsPageList(countryName: widget.countryName),
+     HealthNewsPageList(countryName: widget.countryName),
+      //ScienceNewsPageList(countryName: widget.countryName),
+      SportsPageList(countryName: widget.countryName),
+      TechPageList(countryName: widget.countryName),
     ];
     return SafeArea(
       child: Scaffold(

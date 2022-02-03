@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-import 'package:all_news/select_page.dart';
+import 'package:all_news/ui/views/select_page.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override

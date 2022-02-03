@@ -1,11 +1,7 @@
-import 'package:all_news/screens/12_artical_not_found.dart';
+
+import 'package:all_news/error_screens/12_artical_not_found.dart';
 import 'package:flutter/material.dart' ;
 import 'package:webview_flutter/webview_flutter.dart';
-import 'dart:async';
-import 'dart:io' show Platform;
-import 'package:connectivity/connectivity.dart';
-import 'package:all_news/error.dart';
-
 
 class NewsViewer extends StatefulWidget {
 static const id = 'NewsViewer';
@@ -17,7 +13,7 @@ NewsViewer({ this.newsBody, });
 }
 
 class _NewsViewerState extends State<NewsViewer> {
-   WebViewController controller;
+  WebViewController controller;
   String newsBody;
   bool check  = true;
   String result = '';
@@ -32,7 +28,6 @@ class _NewsViewerState extends State<NewsViewer> {
   }
 @override
 void initState() {
-    // TODO: implement initState
     super.initState();
     newsData(widget.newsBody);
   //  checkStatus();
@@ -47,19 +42,21 @@ void initState() {
   }
   startLoading(String A){
     setState(() {
-      position = 1;
+      position = 0;
     });
   }
 errorLoading(String A){
     setState((){
-      position = 2;
+      position = 0;
     });
 }
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        floatingActionButton:FloatingActionButton(child:Icon(Icons.import_export), onPressed:  ()async => controller.loadUrl(newsBody),),
         appBar:AppBar(
+          elevation:0.0,
           backgroundColor: Colors.white,
             leading: IconButton(icon:Icon(Icons.arrow_back_ios_rounded),color: Colors.black,onPressed:(){Navigator.pop(context);}),
           title:Row(

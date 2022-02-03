@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../select_page.dart';
+import '../ui/views/select_page.dart';
 
 class ConnectionFailedScreen extends StatelessWidget {
   static const id= 'ConnectionFailed';
